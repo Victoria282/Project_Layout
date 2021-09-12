@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/name"
+        android:textColor="@color/black"
+        android:textSize="27sp"
+        android:fontFamily="@font/montserrat_medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:fontFamily="@font/montserrat_italic"
+        android:id="@+id/personalAcc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/userData"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:textColor="#7C7C7C"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_marginStart="5dp"
+        android:fontFamily="@font/montserrat_italic"
+        android:layout_marginTop="5dp"
+        android:id="@+id/numOfDoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numOfDocument"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/personalAcc"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/user"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_general"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/general"
+        android:textAllCaps="false"
+        android:textColor="#7C7C7C"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalAcc"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_prices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/prices"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/btn_settings"
+        app:layout_constraintStart_toEndOf="@+id/btn_general"
+        app:layout_constraintTop_toBottomOf="@+id/numOfDoc"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/settings"
+        android:textAllCaps="false"
+        android:textColor="#7C7C7C"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalAcc"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:fontFamily="@font/montserrat_medium"
+        android:id="@+id/activeTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/active"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_general" />
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        android:id="@+id/cardViewActive"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activeTittle">
+
+        <TextView
+            android:id="@+id/cardTittleActive"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            android:text="Улыбка (бесплатно)" />
+
+        <TextView
+            android:layout_gravity="bottom|left"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/cardActiveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_italic"
+            android:text="Скорость до 100 Мбит/с"
+            android:textColor="#686868"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_gravity="right|center_vertical"
+            android:id="@+id/cardActivePrice"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0₽ / мес" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/recommendedTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="@string/recommended"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewActive" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewRecommended"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recommendedTittle">
+
+        <TextView
+            android:id="@+id/cardRecommendedTittle"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            android:text="Кабельное телевидение" />
+
+        <TextView
+            android:layout_gravity="bottom|left"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_italic"
+            android:text="Более 200 каналов"
+            android:textColor="#686868"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_gravity="right|center_vertical"
+            android:id="@+id/textView5"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="140₽ / мес" />
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
